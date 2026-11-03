@@ -1,0 +1,61 @@
+{
+  "name": "freelens-gpu-charts",
+  "version": "0.1.0",
+  "description": "Freelens extension that charts NVIDIA GPU utilisation and VRAM for the cluster, its nodes and workloads from the Prometheus configured in Freelens",
+  "license": "MIT",
+  "author": {
+    "name": "Freelens GPU Charts Authors"
+  },
+  "renderer": "out/renderer/index.js",
+  "files": [
+    "out/**/*"
+  ],
+  "engines": {
+    "node": ">= 22.0.0",
+    "freelens": "^1.10.0"
+  },
+  "keywords": [
+    "extension",
+    "freelensapp",
+    "freelens",
+    "gpu",
+    "nvidia",
+    "dcgm",
+    "prometheus",
+    "kubernetes",
+    "monitoring"
+  ],
+  "scripts": {
+    "lint": "biome check",
+    "lint:fix": "biome check --fix",
+    "type:check": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:bundle": "vitest run -c vitest.bundle.config.mts",
+    "build:bundle": "electron-vite build",
+    "build": "pnpm type:check && pnpm build:bundle && pnpm test:bundle",
+    "prepack": "pnpm build",
+    "clean:out": "node -e \"require('node:fs').rmSync('out', { recursive: true, force: true })\"",
+    "clean:tgz": "node -e \"const fs = require('node:fs'); for (const f of fs.readdirSync('.')) if (f.endsWith('.tgz')) fs.rmSync(f)\"",
+    "pack:tgz": "pnpm clean:tgz && pnpm pack"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@freelensapp/core": "1.10.3",
+    "@freelensapp/extensions": "1.10.3",
+    "@types/chart.js": "^2.9.41",
+    "@types/node": "~24.12.4",
+    "@types/react": "^17.0.93",
+    "@types/react-dom": "^17.0.26",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron-vite": "^5.0.0",
+    "jsdom": "^30.1.3",
+    "mobx": "^6.15.0",
+    "mobx-react": "^7.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
+  },
+  "packageManager": "pnpm@12.10.1"
+}

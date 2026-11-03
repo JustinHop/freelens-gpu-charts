@@ -1,0 +1,16 @@
+# Build scripts of dependencies are not needed to build or test this extension:
+# the Freelens API arrives as types only, and electron-vite bundles with Rolldown.
+allowBuilds:
+  '@parcel/watcher': false
+  electron: false
+  esbuild: false
+  node-pty: false
+  playwright: false
+
+shellEmulator: true
+
+# Dev-only transitive deps of @freelensapp/core (types only; the host app supplies it at runtime).
+# Pinned past their advisories.
+overrides:
+  dompurify: ^3.4.16
+  decode-uri-component: ^0.5.0

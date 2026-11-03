@@ -1,0 +1,21 @@
+/node_modules/
+/out/
+/coverage/
+*.tgz
+*.log
+*.map
+*.DS_Store
+/.idea
+/.vscode
+
+# Credentials and keys
+.env
+.env.*
+.envrc
+.npmrc
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
