@@ -1,0 +1,184 @@
+/*
+ * Copyright (c) Freelens GPU Charts Authors. Licensed under MIT License.
+ *
+ * Styles of the GPU Charts extension. Colors come from the Freelens theme custom properties;
+ * the two chart colors are the same ones the charts draw with.
+ */
+
+.GpuChartsPage {
+  --gpuChartsUsage: #76b900;
+  --gpuChartsMemory: #f5a623;
+
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--margin, 8px) * 2);
+  padding-bottom: calc(var(--padding, 8px) * 2);
+  color: var(--textColorPrimary);
+}
+
+.GpuChartsHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--padding, 8px);
+}
+
+.GpuChartsHeader h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.GpuChartsHeaderControls {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--padding, 8px) * 2);
+}
+
+.GpuChartsRange {
+  display: flex;
+  align-items: center;
+  gap: var(--padding, 8px);
+  color: var(--textColorSecondary);
+}
+
+.GpuChartsRange .RadioGroup {
+  display: flex;
+  gap: var(--padding, 8px);
+}
+
+.GpuChartsSummary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--margin, 8px) * 3);
+}
+
+.GpuChartsStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.GpuChartsStatLabel {
+  font-size: 12px;
+  color: var(--textColorSecondary);
+}
+
+.GpuChartsStatValue {
+  font-size: 20px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.GpuChartsCharts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: calc(var(--margin, 8px) * 2);
+}
+
+.GpuChartsCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: calc(var(--margin, 8px) * 2);
+  background: var(--contentColor);
+  border-radius: 4px;
+}
+
+.GpuChartsCardTitle {
+  margin-bottom: var(--padding, 8px);
+  color: var(--textColorSecondary);
+}
+
+.GpuChartsCard .chart-container {
+  width: 100%;
+  height: 100%;
+}
+
+.GpuChartsNoMetrics {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--padding, 8px);
+  color: var(--textColorSecondary);
+}
+
+.GpuChartsError {
+  color: var(--colorWarning);
+}
+
+.GpuChartsSectionTitle {
+  margin: 0 0 var(--padding, 8px);
+  font-weight: 500;
+}
+
+.GpuChartsSection .Table {
+  min-height: 120px;
+  max-height: 420px;
+}
+
+.GpuChartsTable .TableCell.name {
+  flex: 2;
+  text-overflow: ellipsis;
+}
+
+.GpuChartsTable .TableCell.narrow {
+  flex: 0 0 90px;
+}
+
+.GpuChartsTable .TableCell.bar {
+  flex: 1;
+}
+
+.GpuChartsLink {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.GpuChartsLink:hover {
+  text-decoration: underline;
+}
+
+.GpuChartsBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  width: 100%;
+}
+
+.GpuChartsBar .LineProgress {
+  width: 100%;
+  height: 5px;
+}
+
+.GpuChartsBar.usage .LineProgress {
+  color: var(--gpuChartsUsage);
+}
+
+.GpuChartsBar.memory .LineProgress {
+  color: var(--gpuChartsMemory);
+}
+
+.GpuChartsBarText {
+  font-size: 11px;
+  line-height: 1;
+  color: var(--textColorSecondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.GpuChartsNotAvailable {
+  color: var(--textColorTertiary, var(--textColorSecondary));
+}
+
+.GpuChartsDetailsRange {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--padding, 8px);
+}
