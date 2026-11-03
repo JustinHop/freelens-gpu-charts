@@ -1,5 +1,9 @@
 /**
- * Copyright (c) Freelens GPU Charts Authors. Licensed under MIT License.
+ * Copyright (c) 2026 Tal Naeh (original: freelens-gpu-extension, MIT)
+ * Copyright (c) 2026 Freelens GPU Charts Authors
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ *
+ * Adapted from electron.vite.config.js of https://github.com/freelensapp/freelens-gpu-extension.
  */
 
 import { builtinModules } from "node:module";

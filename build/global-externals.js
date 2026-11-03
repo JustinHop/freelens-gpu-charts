@@ -1,7 +1,9 @@
 /**
- * Copyright (c) Freelens GPU Charts Authors. Licensed under MIT License.
+ * Copyright (c) 2026 Tal Naeh (original: freelens-gpu-extension, MIT)
+ * Copyright (c) 2026 Freelens GPU Charts Authors
+ * Licensed under MIT License. See LICENSE in root directory for more information.
  *
- * Adapted from the build helper of freelens-gpu-extension.
+ * Adapted from build/global-externals.js of https://github.com/freelensapp/freelens-gpu-extension.
  */
 
 // Vite/Rolldown plugin that maps bare module ids (react, mobx, ...) to runtime

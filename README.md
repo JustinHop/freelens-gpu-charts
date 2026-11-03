@@ -111,3 +111,14 @@ src/renderer/__tests__/         unit tests and the bundle smoke test
 - The time range selectors are separate from the built-in one in the cluster overview and in the details panels.
 - The queries are range queries over the selected range. If one query of the page fails, Freelens answers the whole
   batch with nothing, and the page says it could not load GPU metrics.
+
+## Acknowledgements
+
+- [freelens-gpu-extension](https://github.com/freelensapp/freelens-gpu-extension) by Tal Naeh (MIT): the build setup,
+  `build/global-externals.js` and `electron.vite.config.js`, comes from it and was reworked for this extension.
+- [Freelens](https://github.com/freelensapp/freelens) (MIT): the chart design follows its built-in metrics charts, and
+  the Prometheus query shapes follow the ones it uses for them.
+
+## License
+
+[MIT](./LICENSE). The copyright of the portions taken from freelens-gpu-extension stays with Tal Naeh.
