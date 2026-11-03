@@ -14,8 +14,6 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "vite/client"],
     "paths": {
-      // @freelensapp/core's exports map has no types, so moduleResolution=bundler would
-      // resolve the Freelens API to `any` without these.
       "@freelensapp/core/main": ["./node_modules/@freelensapp/core/static/build/library/src/main/library.d.ts"],
       "@freelensapp/core/renderer": ["./node_modules/@freelensapp/core/static/build/library/src/renderer/library.d.ts"]
     }

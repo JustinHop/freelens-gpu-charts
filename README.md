@@ -58,9 +58,17 @@ Nothing else is needed on the cluster.
 
 ## Install
 
-Build the package (see below) or take a released `freelens-gpu-charts-<version>.tgz`. In Freelens open Extensions,
-enter the absolute path of the `.tgz` in the install field and install it. Freelens runs `pnpm install --prod` on the
-package; the extension has no runtime dependencies, everything it needs is in the bundle or provided by Freelens itself.
+There are no releases yet; build the package yourself (Node 22 or newer and pnpm needed):
+
+```sh
+pnpm install
+pnpm build
+pnpm pack:tgz
+```
+
+This leaves `freelens-gpu-charts-<version>.tgz` in the project directory. In Freelens open Extensions, enter the
+absolute path of the `.tgz` in the install field and install it. Freelens runs `pnpm install --prod` on the package; the
+extension has no runtime dependencies, everything it needs is in the bundle or provided by Freelens itself.
 
 ## Development
 
@@ -74,6 +82,10 @@ pnpm test          # unit tests
 pnpm build         # type check, bundle, and the bundle smoke test
 pnpm pack:tgz      # freelens-gpu-charts-<version>.tgz in the project directory
 ```
+
+`tsconfig.json` maps `@freelensapp/core/main` and `@freelensapp/core/renderer` to the declaration files in the package
+by hand, because the package's exports map has no types and `moduleResolution: bundler` would otherwise resolve the
+Freelens API to `any`.
 
 The bundle is a single CommonJS file, `out/renderer/index.js`. The libraries Freelens provides are not bundled: imports
 of `@freelensapp/extensions`, `react`, `react/jsx-runtime`, `react-dom`, `react-router`, `react-router-dom`, `mobx` and

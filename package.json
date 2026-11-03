@@ -6,6 +6,14 @@
   "author": {
     "name": "Freelens GPU Charts Authors"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinHop/freelens-gpu-charts.git"
+  },
+  "homepage": "https://github.com/JustinHop/freelens-gpu-charts",
+  "bugs": {
+    "url": "https://github.com/JustinHop/freelens-gpu-charts/issues"
+  },
   "renderer": "out/renderer/index.js",
   "files": [
     "out/**/*"

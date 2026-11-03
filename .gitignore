@@ -8,6 +8,11 @@
 /.idea
 /.vscode
 
+# Local agent and tool state
+.claude/
+logs/
+.playwright-mcp/
+
 # Credentials and keys
 .env
 .env.*
